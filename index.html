@@ -48,7 +48,7 @@
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .projects {
+    .projects-card-section {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1rem;
@@ -65,9 +65,67 @@
       background: #222;
       color: white;
     }
+
+   
+
+
+     .project-card {
+    max-width: 350px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 16px;
+    transition: transform 0.3s ease;
+  }
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+  .project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .project-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 16px 0 8px;
+    color: #333;
+  }
+  .project-desc {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+  .tech-stack span {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #333;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    margin: 2px;
+    border-radius: 9999px;
+  }
+  .project-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+  .project-links a {
+    text-decoration: none;
+    color: #0077cc;
+  }
+  .project-links a:hover {
+    text-decoration: underline;
+  }
+
+    
   </style>
+    <link rel="stylesheet" href="card.css">
+
   </head>
-  <body>
+  <body oncontextmenu="preventDefult();">
     <header>
       <h1>DHANSHRI LONDHE</h1>
       <p>Aspiring Developer | Creative Designer | Tech Enthusiast</p>
@@ -78,7 +136,7 @@
       <h2>About Me</h2>
       <p>I am a passionate tech learner
         Currently Enrolled in Diploma in IT engineering ( 3rd Year )
-        with hands-on experience in
+        with hands-on exerience in
         programming, web development, and design. I enjoy solving
         problems, participating in competitions, and constantly learning
         new technologies.</p>
@@ -92,7 +150,7 @@
         <li><strong>Web Development:</strong> HTML, CSS, JavaScript,
           PHP, basic SQL </li>
         <li><strong>Tools & Frameworks:</strong> Git, GitHub, XAMPP,
-          VScode , vercel</li>
+          VScode , vercel,netlify</li>
         <li><strong>Databases:</strong> MySQL, PostgreSQL
           (pgAdmin4)</li>
         <li><strong>Design:</strong> Logo Design, UI/UX Awareness,
@@ -109,21 +167,115 @@
       </ul>
     </section>
 
-    <section>
+    <!-- <section>
       <h2>Frontend Projects</h2>
       <div class="projects">
         <div class="project-card">
-          <h3>Project Title 1</h3>
-          <p>Short description of what the project does, the tech
-            stack used, and any features worth highlighting.</p>
+          <h3> 🍽️ Qrispy Restaurant Website</h3>
+          <p>
+            A responsive restaurant landing page built with HTML, CSS, and
+            Bootstrap. Features include a hero section, menu display, image
+            gallery, and contact details — designed to provide a clean and
+            engaging user experience across all devices.
+          </p>
+          <button class="visitebtn"> Live Demo </button>
+
         </div>
         <div class="project-card">
-          <h3>Project Title 2</h3>
-          <p>Short description of what the project does, the tech
-            stack used, and any features worth highlighting.</p>
+          <h3> 👨‍💻Tech and Teach </h3>
+          <p> Tech and teach is an Elearning Website to Learn My SQL Database
+            <br>
+            It features structured tutorials, a feedback system, and an SMTP
+            integration that automatically sends user feedback to email —
+            enhancing user interaction and data collection.</p>
+
+          <button class="visitebtn"> Live Demo </button>
         </div>
-        <!-- Add more project cards as needed -->
+        Add more project cards as needed
       </div>
+    </section>
+     -->
+
+    <!-- new project card by gpt  -->
+
+    <section class="projects-card-section">
+
+      <!--         1  =========== Food Restrorant  Website  ================-->
+      <div class="project-card">
+        <img class="project-img" src="/imgs/restro.png"
+          alt="Project Thumbnail">
+        <h3 class="project-title">🍽️ Qrispy Restaurant Website</h3>
+        <p class="project-desc">
+          A responsive restaurant landing page built with HTML, CSS, and
+          Bootstrap. Features include a hero section, menu display, image
+          gallery, and contact details — designed to provide a clean and
+          engaging user experience across all devices.
+        </p>
+        <div class="tech-stack">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Technerd1124/Restorant-Website-FrontEnd-"
+            target="_blank">GitHub</a>
+          <a href="https://qrispy-restorant.netlify.app/" target="_blank">Live
+            Demo</a>
+        </div>
+      </div>
+
+      <!--         2  =========== Elearning Website  ================-->
+      <div class="project-card">
+        <img class="project-img" src="/imgs/eLearning.png"
+          alt="Project Thumbnail">
+        <h3 class="project-title"> 👨‍💻Tech and Teach</h3>
+        <p class="project-desc">
+          <p> Tech and teach is an Elearning Website to Learn My SQL Database
+            <br>
+            It features structured tutorials, a feedback system, and an SMTP
+            integration that automatically sends user feedback to email —
+            enhancing user interaction and data collection.</p>
+        </p>
+        <div class="tech-stack">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>BootStrap</span>
+          <span>JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Technerd1124/E-Learning-Website"
+            target="_blank">GitHub</a>
+          <a href="https://techandteach.netlify.app/" target="_blank">Live
+            Demo</a>
+        </div>
+      </div>
+      <!-- ========= 3 Paassword Generator========  -->
+      <div class="project-card">
+        <img class="project-img" src="/imgs/passgen.png"
+          alt="Project Thumbnail">
+        <h3 class="project-title"> 👨‍💻Tech and Teach</h3>
+        <p class="project-desc">
+          A responsive web application built with HTML, CSS, and JavaScript that
+          allows users to generate secure passwords based on customizable
+          criteria such as length, inclusion of uppercase and lowercase letters,
+          numbers, and symbols. Designed with a user-friendly interface to
+          enhance usability across devices.
+        </p>
+        <div class="tech-stack">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>BootStrap</span>
+          <span>JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Technerd1124/PassWord-Generator"
+            target="_blank">GitHub</a>
+          <a href="https://password-gen-dhanshri.netlify.app/"
+            target="_blank">Live
+            Demo</a>
+        </div>
+      </div>
+
     </section>
 
     <section>
